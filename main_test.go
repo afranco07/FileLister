@@ -16,10 +16,6 @@ func (conn *WriterMock) Write(b []byte) (n int, err error) {
 
 // Checks if actual array slice and expected slice match
 func Equal(actual, expected []string) bool {
-	// if len(actual) != len(expected) {
-	// 	return false
-	// }
-
 	for index, value := range expected {
 		if value != actual[index] {
 			return false
