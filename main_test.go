@@ -16,12 +16,12 @@ func (conn *WriterMock) Write(b []byte) (n int, err error) {
 
 // Checks if actual array slice and expected slice match
 func Equal(actual, expected []string) bool {
-	if len(actual) != len(expected) {
-		return false
-	}
+	// if len(actual) != len(expected) {
+	// 	return false
+	// }
 
-	for index, value := range actual {
-		if value != expected[index] {
+	for index, value := range expected {
+		if value != actual[index] {
 			return false
 		}
 	}
@@ -34,7 +34,7 @@ func TestListFiles(t *testing.T) {
 		path     string
 		expected []string
 	}{
-		{".", []string{"/main.go\n", "/main_test.go\n"}},
+		{".", []string{"/README.md\n", "/main.go\n", "/main_test.go\n"}},
 		{"/DoesNotExist", []string{"/DoesNotExist does not exist\n"}},
 	}
 

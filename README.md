@@ -14,3 +14,17 @@ This utility starts a TCP server.
 printf "/home/alberto/Downloads" | nc localhost 8080
 ```
 4. You should see a repsonse in the terminal
+
+## Running Tests
+
+To run the tests run:
+```bash
+go test
+```
+
+## Build Binary File
+
+This file is already included under the `Releases` tab, but if you'd like to build it yourself you can do:
+```bash
+go build main.go
+```
