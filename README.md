@@ -1,5 +1,7 @@
 # Golang File Lister
 
+![file-lister-demo](https://raw.githubusercontent.com/afranco07/gifImageStorage/master/golang_file_lister_demo.gif)
+
 A utility written in Go that lists all of the files within the directory you pass to it.
 
 This utility starts a TCP server.
@@ -11,7 +13,7 @@ This utility starts a TCP server.
 3. The application should have started and you shoud see `Starting server on port 8080 (localhost)...`
 4. You can send strings using the `printf` command in the terminal i.e.:
 ```bash
-printf "/home/alberto/Downloads" | nc localhost 8080
+printf "/usr/local/bin" | nc localhost 8080
 ```
 4. You should see a repsonse in the terminal
 
